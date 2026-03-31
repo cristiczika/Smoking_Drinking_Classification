@@ -1,0 +1,47 @@
+Logica Multi-Label Decision Tree (Top 3 Levels):
+|--- sex <= -0.06
+|   |--- age <= 0.34
+|   |   |--- age <= -0.36
+|   |   |   |--- gamma_GTP <= -0.43
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- gamma_GTP >  -0.43
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |--- age >  -0.36
+|   |   |   |--- gamma_GTP <= -0.33
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- gamma_GTP >  -0.33
+|   |   |   |   |--- truncated branch of depth 4
+|   |--- age >  0.34
+|   |   |--- age <= 1.05
+|   |   |   |--- gamma_GTP <= -0.31
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- gamma_GTP >  -0.31
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |--- age >  1.05
+|   |   |   |--- age <= 1.40
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- age >  1.40
+|   |   |   |   |--- truncated branch of depth 4
+|--- sex >  -0.06
+|   |--- age <= 0.70
+|   |   |--- gamma_GTP <= -0.01
+|   |   |   |--- HDL_chole <= -0.19
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- HDL_chole >  -0.19
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |--- gamma_GTP >  -0.01
+|   |   |   |--- HDL_chole <= -0.59
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- HDL_chole >  -0.59
+|   |   |   |   |--- truncated branch of depth 4
+|   |--- age >  0.70
+|   |   |--- gamma_GTP <= -0.05
+|   |   |   |--- age <= 1.40
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- age >  1.40
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |--- gamma_GTP >  -0.05
+|   |   |   |--- age <= 1.40
+|   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- age >  1.40
+|   |   |   |   |--- truncated branch of depth 4
