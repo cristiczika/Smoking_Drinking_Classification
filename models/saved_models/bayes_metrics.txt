@@ -1,0 +1,16 @@
+Gaussian Naive Bayes - Multi-Label Evaluation
+==================================================
+
+              precision    recall  f1-score   support
+
+   is_smoker       0.41      0.66      0.51     42789
+  is_drinker       0.69      0.67      0.68     99095
+
+   micro avg       0.58      0.66      0.62    141884
+   macro avg       0.55      0.66      0.59    141884
+weighted avg       0.61      0.66      0.63    141884
+ samples avg       0.28      0.35      0.30    141884
+
+Accuracy: 0.5045
+F1-score (macro): 0.5935
+Best Params: {'estimator__var_smoothing': 1e-09}
