@@ -1,0 +1,16 @@
+KNN - Multi-Label Evaluation
+==================================================
+
+              precision    recall  f1-score   support
+
+   is_smoker       0.52      0.32      0.39     42789
+  is_drinker       0.69      0.72      0.71     99095
+
+   micro avg       0.66      0.60      0.63    141884
+   macro avg       0.61      0.52      0.55    141884
+weighted avg       0.64      0.60      0.61    141884
+ samples avg       0.35      0.33      0.33    141884
+
+Accuracy: 0.5517
+F1-score (macro): 0.5497
+Best Params: {'estimator__metric': 'euclidean', 'estimator__n_neighbors': 11, 'estimator__weights': 'uniform'}
