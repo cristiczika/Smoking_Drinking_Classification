@@ -8,30 +8,40 @@ from sklearn.multioutput import MultiOutputClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report, accuracy_score, f1_score
 
+#Cum apar mesajele in terminal
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 class SmokingDrinkingBayesTrainer:
+    # constructor - unde sunt datele procesate si unde să salveze rezultatele
     def __init__(self, data_folder, results_folder):
         self.data_folder = data_folder
         self.results_folder = results_folder
         self.best_model = None
 
+        # daca nu exista folder pt rezultate, il creaza
         if not os.path.exists(self.results_folder):
             os.makedirs(self.results_folder)
 
+    # incarca datele preprocesate
     def load_data(self):
+
+        #citește fișierele create de preprocessor.py
         X_train = np.load(os.path.join(self.data_folder, 'X_train.npy'))
         y_train = np.load(os.path.join(self.data_folder, 'y_train.npy'))
         X_test = np.load(os.path.join(self.data_folder, 'X_test.npy'))
         y_test = np.load(os.path.join(self.data_folder, 'y_test.npy'))
 
+        # le returneaza sa poate fi folosite
         return X_train, y_train, X_test, y_test
 
     def train(self):
+        #primeste datele procesate
         X_train, y_train, X_test, y_test = self.load_data()
 
+        #spune cat de mare este training data
         logging.info(f"Setul complet de antrenament are {X_train.shape[0]} rânduri.")
+
         logging.info("Începem GridSearch pentru Gaussian Naive Bayes...")
 
         base_model = MultiOutputClassifier(GaussianNB())
